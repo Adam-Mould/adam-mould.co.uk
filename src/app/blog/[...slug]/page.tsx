@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Mdx } from "~/components/mdx-components";
-import { buttonVariants } from "~/components/ui/button";
+import { Button } from "~/components/ui/button";
 import { absoluteUrl, cn, formatDate } from "~/lib/utils";
 
 import "~/styles/mdx.css";
@@ -93,16 +93,16 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
-      <Link
-        href="/blog"
-        className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
-        )}
+      <Button
+        asChild
+        variant="ghost"
+        className="absolute left-[-200px] top-14 hidden xl:inline-flex"
       >
-        <ChevronLeft className="mr-2 h-4 w-4" />
-        See all posts
-      </Link>
+        <Link href="/blog">
+          <ChevronLeft className="mr-2 h-4 w-4" />
+          See all posts
+        </Link>
+      </Button>
       <div>
         {post.date && (
           <time dateTime={post.date} className="block text-sm text-slate-500">
@@ -151,10 +151,12 @@ export default async function PostPage({ params }: PostPageProps) {
       <Mdx code={post.body.code} />
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
-        <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
-          <ChevronLeft className="mr-2 h-4 w-4" />
-          See all posts
-        </Link>
+        <Button asChild variant="ghost">
+          <Link href="/blog">
+            <ChevronLeft className="mr-2 h-4 w-4" />
+            See all posts
+          </Link>
+        </Button>
       </div>
     </article>
   );

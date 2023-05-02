@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { ServicesGrid } from "~/components/services-grid";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,16 +11,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
-import Image from "next/image";
 
 // Images
-import website from "~/../public/images/icons/website-development.svg";
-import wordpress from "~/../public/images/icons/wordpress-development.svg";
-import webApp from "~/../public/images/icons/web-app-development.svg";
-import ecommerce from "~/../public/images/icons/ecommerce-development.svg";
-import hosting from "~/../public/images/icons/website-hosting.svg";
-import fullService from "~/../public/images/icons/full-service-development.svg";
 import agency from "~/../public/images/icons/agency-partner.svg";
+import fullService from "~/../public/images/icons/full-service-development.svg";
 import outsource from "~/../public/images/icons/outsource-development.svg";
 import maintenance from "~/../public/images/icons/software-maintenance.svg";
 
@@ -46,56 +42,7 @@ export function SiteMenuDesktop() {
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
 
           <NavigationMenuContent>
-            <ul className="grid gap-4 p-4 md:grid-cols-2">
-              <li>
-                <SiteMenuItem
-                  title="Website Development"
-                  href="/website-development"
-                  icon={website}
-                  description="Transform your online presence with the help of a professional. Complete website development from start to finish, for sites of all sizes and complexity."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="WordPress Development"
-                  href="/wordpress-development"
-                  icon={wordpress}
-                  description="Leverage the worlds most popular content management system. Bespoke WordPress development for themes, plugins and eCommerce sites."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Web App Development"
-                  href="/web-app-development"
-                  icon={webApp}
-                  description="Progressive web applications or native mobile apps built using React Native, launch your next web-based application development with confidence."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="eCommerce Development"
-                  href="/ecommerce-development"
-                  icon={ecommerce}
-                  description="Increase online sales and hit conversion targets with a website to compliment your product. Harness my experience to help grow your business."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Website Architect"
-                  href="/website-architect"
-                  icon={website}
-                  description="Professional website architecture and consultancy services. Steer the direction of your project with the help of a full-stack engineer."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Website Hosting"
-                  href="/website-hosting"
-                  icon={hosting}
-                  description="Take the hassle out of website hosting. Highly performant cloud hosting with security at the forefront, giving your website the hosting it deserves."
-                />
-              </li>
-            </ul>
+            <ServicesGrid />
           </NavigationMenuContent>
         </NavigationMenuItem>
 
