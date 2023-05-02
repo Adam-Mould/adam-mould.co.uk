@@ -39,12 +39,12 @@ export function Award() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-4xl flex-wrap items-center gap-8 sm:flex md:flex-nowrap">
-          <div className="mx-auto w-24 flex-initial shrink-0 sm:m-0 sm:w-40">
+        <div className="relative flex-wrap items-center gap-8 sm:flex md:flex-nowrap">
+          <div className="mx-auto flex-initial sm:m-0 sm:w-40">
             <Image
               src={feAwardsLogo}
               alt=""
-              className="rounded-lg bg-white p-1"
+              className="mx-auto block w-32 rounded-lg bg-white p-1 sm:w-48"
             />
           </div>
 

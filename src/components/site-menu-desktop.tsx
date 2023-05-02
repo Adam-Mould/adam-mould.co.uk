@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ServicesGrid } from "~/components/services-grid";
+import { SolutionsGrid } from "~/components/solutions-grid";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,12 +12,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
-
-// Images
-import agency from "~/../public/images/icons/agency-partner.svg";
-import fullService from "~/../public/images/icons/full-service-development.svg";
-import outsource from "~/../public/images/icons/outsource-development.svg";
-import maintenance from "~/../public/images/icons/software-maintenance.svg";
 
 export function SiteMenuDesktop() {
   return (
@@ -50,40 +45,7 @@ export function SiteMenuDesktop() {
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
 
           <NavigationMenuContent>
-            <ul className="grid gap-4 p-4 md:grid-cols-2">
-              <li>
-                <SiteMenuItem
-                  title="Full-Service Development"
-                  href="/full-service-development"
-                  icon={fullService}
-                  description="Whether you're a startup or an established business, I can help you build your product from the ground up."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Marketing Agency Partner"
-                  href="/agency-partner"
-                  icon={agency}
-                  description="I partner with agencies to provide software services behind the scenes, helping you cater for your client’s digital needs."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Outsource Development"
-                  href="/outsource-development"
-                  icon={outsource}
-                  description="Your in-house design team provides me with the designs, and I will transform them into working code."
-                />
-              </li>
-              <li>
-                <SiteMenuItem
-                  title="Software Maintenance"
-                  href="/software-maintenance"
-                  icon={maintenance}
-                  description="Entrust the technical maintenance of your existing product. From security patches to new features, I can be there to help."
-                />
-              </li>
-            </ul>
+            <SolutionsGrid />
           </NavigationMenuContent>
         </NavigationMenuItem>
 

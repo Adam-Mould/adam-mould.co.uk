@@ -25,9 +25,13 @@ export function About() {
           </h2>
         </header>
 
-        <div className="mt-6 flex gap-x-8 gap-y-16 md:flex-nowrap">
-          <div className="w-2/5">
-            <Image src={me} alt="Adam Mould" className="rounded-2xl" />
+        <div className="mt-6 md:flex md:flex-nowrap md:gap-x-8">
+          <div className="flex-1">
+            <Image
+              src={me}
+              alt="Adam Mould"
+              className="w-full max-w-md rounded-2xl"
+            />
 
             <p className="mt-4">
               I&apos;m a self-proclaimed web enthusiast, having spent the last
@@ -41,7 +45,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="w-3/5">
+          <div className="mt-6 flex-1 md:mt-0">
             <Timeline />
 
             <Button asChild className="mt-6">
@@ -123,7 +127,7 @@ function Timeline() {
                     {item.date}
                   </time>
 
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                  <h3 className="font-semibold text-slate-900 dark:text-slate-100 sm:text-lg">
                     {item.title}
                   </h3>
 
