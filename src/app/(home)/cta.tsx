@@ -8,11 +8,11 @@ export function CallToAction() {
     <section className="relative isolate overflow-hidden bg-slate-900 dark:bg-white/10">
       <div className="container max-w-2xl py-[5vw] text-center xl:py-24">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-          <Balancer>Get in Touch and Let's Discuss Your Next Project</Balancer>
+          <Balancer>Get in Touch and Let&apos;s Discuss Your Next Project</Balancer>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-200">
           <Balancer>
-            Drop me an email, or give me a call, and let's discuss how I can
+            Drop me an email, or give me a call, and let&apos;s discuss how I can
             help with your upcoming development requirements.
           </Balancer>
         </p>
