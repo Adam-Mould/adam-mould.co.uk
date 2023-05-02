@@ -6,7 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Mdx } from "~/components/mdx-components";
 import { Button } from "~/components/ui/button";
-import { absoluteUrl, cn, formatDate } from "~/lib/utils";
+import { absoluteUrl, formatDate } from "~/lib/utils";
 
 import "~/styles/mdx.css";
 

@@ -1,15 +1,8 @@
-import { allPosts } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 import Link from "next/link";
-import Image from "next/image";
+import { getLatestPosts } from "~/lib/blog";
 
 export function RecentPosts() {
-  const posts = allPosts
-    .filter((post) => post.published)
-    .sort((a, b) => {
-      return compareDesc(new Date(a.date), new Date(b.date));
-    })
-    .slice(0, 3);
+  const posts = getLatestPosts();
 
   return (
     <ol className="divide-y divide-slate-500">

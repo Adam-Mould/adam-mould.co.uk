@@ -33,11 +33,11 @@ export function Hero() {
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-10 md:gap-x-8">
-            <Button asChild>
+            <Button asChild size="lg">
               <Link href="/">About Me</Link>
             </Button>
 
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" size="lg">
               <Link href="/contact">
                 Get in touch{" "}
                 <ArrowRight
