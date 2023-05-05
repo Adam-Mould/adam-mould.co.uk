@@ -28,7 +28,7 @@ export function SiteHeader() {
 
         <div className="flex flex-1 justify-end gap-4">
           <Button asChild className="hidden lg:inline-flex">
-            <Link href="/">Let&apos;s Talk</Link>
+            <Link href="/contact">Let&apos;s Talk</Link>
           </Button>
 
           <ThemeSwitch />

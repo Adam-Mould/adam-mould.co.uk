@@ -27,7 +27,7 @@ export function SiteMenuDesktop() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href="/" className={navigationMenuTriggerStyle()}>
+            <Link href="/about" className={navigationMenuTriggerStyle()}>
               About
             </Link>
           </NavigationMenuLink>

@@ -1,6 +1,6 @@
 import { About } from "./about";
 import { Award } from "./award";
-import { LatestBlog } from "./blog";
+import { LatestBlog } from "../blog";
 import { CallToAction } from "./cta";
 import { Hero } from "./hero";
 import { Intro } from "./intro";

@@ -2,10 +2,6 @@ import "./src/env.mjs";
 import { withContentlayer } from "next-contentlayer";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-};
+const nextConfig = {};
 
 export default withContentlayer(nextConfig);

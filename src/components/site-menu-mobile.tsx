@@ -1,10 +1,10 @@
 import {
   Book,
-  HelpingHand,
   Home,
   Menu,
   PackageOpen,
   Palette,
+  Phone,
   Puzzle,
   User,
   X,
@@ -15,9 +15,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 
@@ -77,6 +74,12 @@ export function SiteMenuMobile({
           <Link href="/blog">
             <Book size={18} className="mr-2" />
             Blog
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/contact">
+            <Phone size={18} className="mr-2" />
+            Contact
           </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
