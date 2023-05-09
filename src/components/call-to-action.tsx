@@ -1,32 +1,33 @@
-import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
-export function CallToAction() {
+export function CallToAction({
+  title,
+  description,
+  children,
+}: React.PropsWithChildren<{ title: string; description: string }>) {
   return (
-    <section className="relative isolate overflow-hidden bg-slate-900 dark:bg-white/10">
-      <div className="container max-w-2xl py-[5vw] text-center xl:py-24">
+    <section className="relative isolate overflow-hidden bg-slate-900 py-[5vw] text-center dark:bg-white/10 xl:py-24">
+      <header className="container mx-auto">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-          <Balancer>
-            Get in Touch and Let&apos;s Discuss Your Next Project
-          </Balancer>
+          <Balancer>{title}</Balancer>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-slate-200">
-          <Balancer>
-            Drop me an email, or give me a call, and let&apos;s discuss how I
-            can help with your upcoming development requirements.
-          </Balancer>
+        <p className="mt-6 text-lg leading-8 text-slate-200">
+          <Balancer>{description}</Balancer>
         </p>
+      </header>
 
-        <div className="mt-8">
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-slate-900 hover:bg-white focus-visible:bg-white"
-          >
-            <Link href="/contact">Get Started</Link>
-          </Button>
-        </div>
+      {children}
+
+      <div className="mt-8">
+        <Button
+          asChild
+          size="lg"
+          className="bg-white text-slate-900 hover:bg-white focus-visible:bg-white"
+        >
+          <Link href="/contact">Get in Touch</Link>
+        </Button>
       </div>
 
       <svg

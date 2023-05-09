@@ -1,6 +1,10 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { ServicesGrid } from "~/components/services-grid";
 import { SolutionsGrid } from "~/components/solutions-grid";
 import {
@@ -14,8 +18,17 @@ import {
 } from "~/components/ui/navigation-menu";
 
 export function SiteMenuDesktop() {
+  const [value, setValue] = useState("");
+  const pathname = usePathname();
+
+  console.log(pathname);
+
+  useEffect(() => {
+    setValue("");
+  }, [pathname]);
+
   return (
-    <NavigationMenu>
+    <NavigationMenu value={value} onValueChange={setValue}>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild>

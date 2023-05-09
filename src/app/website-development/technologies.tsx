@@ -1,10 +1,13 @@
-"use client";
-
-import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { cn } from "~/lib/utils";
 import { v4 as uuidv4 } from "uuid";
+import { CallToAction } from "~/components/call-to-action";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "~/components/ui/tooltip";
+import { cn } from "~/lib/utils";
 
 import css from "~/../public/images/logos/css.svg";
 import firebase from "~/../public/images/logos/firebase.svg";
@@ -26,12 +29,6 @@ import turborepo from "~/../public/images/logos/turborepo.svg";
 import typescript from "~/../public/images/logos/typescript.svg";
 import vercel from "~/../public/images/logos/vercel.svg";
 import wordpress from "~/../public/images/logos/wordpress.png";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "~/components/ui/tooltip";
 
 const logos = [
   { src: react, alt: "React", className: "w-1/2" },
@@ -56,27 +53,32 @@ const logos = [
   { src: css, alt: "CSS", className: "w-1/2" },
 ];
 
-export function TechnologiesSlider() {
+export function Technologies() {
   return (
-    <TooltipProvider delayDuration={200}>
-      <div className="mx-auto mt-8 grid max-w-4xl grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] items-center gap-8 px-4 lg:max-w-[1600px]">
-        {logos.map(({ src, alt, className = "" }) => (
-          <Tooltip key={uuidv4()}>
-            <TooltipTrigger asChild>
-              <div className="flex aspect-video items-center justify-center">
-                <Image
-                  src={src}
-                  alt={alt}
-                  className={cn("w-full object-contain", className)}
-                />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{alt}</p>
-            </TooltipContent>
-          </Tooltip>
-        ))}
-      </div>
-    </TooltipProvider>
+    <CallToAction
+      title="Build With Modern Programming Languages"
+      description="Partner with a developer that can produce cutting-edge websites using the latest technologies."
+    >
+      <TooltipProvider delayDuration={200}>
+        <div className="mx-auto mt-8 grid max-w-4xl grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] items-center gap-8 px-4 lg:max-w-[1600px]">
+          {logos.map(({ src, alt, className = "" }) => (
+            <Tooltip key={uuidv4()}>
+              <TooltipTrigger asChild>
+                <div className="flex aspect-video items-center justify-center">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    className={cn("w-full object-contain", className)}
+                  />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{alt}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+      </TooltipProvider>
+    </CallToAction>
   );
 }

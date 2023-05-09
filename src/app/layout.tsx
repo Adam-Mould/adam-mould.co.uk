@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import Providers from "./providers";
-import { SiteHeader } from "~/components/site-header";
 import { SiteFooter } from "~/components/site-footer";
+import { SiteHeader } from "~/components/site-header";
+import Providers from "./providers";
 
 import "~/styles/globals.css";
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Intro() {
   return (
-    <section className="pb-[10vw] xl:pb-32">
+    <section className="py-[10vw] xl:py-32">
       <div className="container">
         <div className="flex flex-col gap-x-8 lg:flex-row">
           <div className="flex-1 space-y-4">
@@ -34,7 +34,7 @@ export function Intro() {
             </p>
           </div>
 
-          <div className="flex-1 mt-8 lg:mt-0">
+          <div className="mt-8 flex-1 lg:mt-0">
             <Image
               src={me}
               alt="Adam Mould"
